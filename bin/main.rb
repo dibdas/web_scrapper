@@ -2,7 +2,6 @@ require_relative '../lib/scrapper'
 require 'colorize'
 
 def results
-  list = []
   scrapper = Scrapper.new('https://weworkremotely.com/#job-listings')
   job_list = scrapper.scraper
   job_list.each do |job|
@@ -17,23 +16,22 @@ def results
 end
 
 def input
-    puts "would you like to see the details of the website ?"
+  puts 'would you like to see the details of the website ?'
+  puts "To continue \n Type 'y' or press 'Enter' \n \n"
+  puts "To stop and quit \n Type 'q' \n \n"
+  choice = gets.chomp.downcase
+  if ['y', ' '].include?(choice)
+    results
+  elsif %w[q].include?(choice)
+    puts 'good luck with you searching'.yellow
+    puts 'thank you for using my scraper'.green.bold
+    exit
+  else
+    puts 'invalid character'.red.bold
     puts "To continue \n Type 'y' or press 'Enter' \n \n"
     puts "To stop and quit \n Type 'q' \n \n"
-    choice = gets.chomp.downcase
-    if['y',' '].include?(choice)
-        results
-    elsif %w[q].include?(choice)
-        puts "good luck with you searching".yellow
-        puts "thank you for using my scraper".green.bold
-        exit;
-    else
-        puts "invalid character".red.bold
-        puts "To continue \n Type 'y' or press 'Enter' \n \n"
-        puts "To stop and quit \n Type 'q' \n \n"
-        results
-    end
+    results
+  end
 end
 
 input
-
