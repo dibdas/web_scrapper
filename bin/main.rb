@@ -1,21 +1,39 @@
 require_relative '../lib/scrapper'
+require 'colorize'
 
 def results
-  array = []
+  list = []
   scrapper = Scrapper.new('https://weworkremotely.com/#job-listings')
   job_list = scrapper.scraper
-  puts job_list
   job_list.each do |job|
     jobs = {
       name: job.css('span.company').text,
-      title: job.css('span.title').text,
-      feature: job.css('span.featured').text,
-      role: job.css('span.company').text,
-      region: job.css('span.region company').text
+      title: job.css('span.title').text
     }
-    array << jobs
+    puts "company: #{jobs[:name]}".red.bold
+    puts "role: #{jobs[:title]}".yellow.bold
+    sleep(0.7)
   end
-  puts array
 end
 
-results
+def input
+    puts "would you like to see the details of the website ?"
+    puts "To continue \n Type 'y' or press 'Enter' \n \n"
+    puts "To stop and quit \n Type 'q' \n \n"
+    choice = gets.chomp.downcase
+    if['y',' '].include?(choice)
+        results
+    elsif %w[q].include?(choice)
+        puts "good luck with you searching".yellow
+        puts "thank you for using my scraper".green.bold
+        exit;
+    else
+        puts "invalid character".red.bold
+        puts "To continue \n Type 'y' or press 'Enter' \n \n"
+        puts "To stop and quit \n Type 'q' \n \n"
+        results
+    end
+end
+
+input
+
