@@ -2,7 +2,7 @@ require 'httparty'
 require 'nokogiri'
 
 class Scrapper
-  attr_reader :url
+  attr_accessor :url
 
   def initialize(url)
     @url = url
@@ -12,6 +12,5 @@ class Scrapper
     unparsed_page = HTTParty.get(@url)
     parsed_page ||= Nokogiri::HTML(unparsed_page.body)
     parsed_page.css('li.feature')
-    
   end
 end

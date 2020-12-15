@@ -59,7 +59,6 @@ def results(input_category)
     puts "company: #{jobs[:name]}".red.bold
     puts "role: #{jobs[:title]}".yellow.bold
     puts ' '
-    
   end
 end
 
