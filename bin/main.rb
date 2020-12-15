@@ -59,7 +59,7 @@ def results(input_category)
     puts "company: #{jobs[:name]}".red.bold
     puts "role: #{jobs[:title]}".yellow.bold
     puts ' '
-    sleep(0.7)
+    
   end
 end
 
