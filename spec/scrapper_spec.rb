@@ -1,5 +1,4 @@
-require_relative '../lib/scrapper.rb'
-
+require_relative '../lib/scrapper'
 
 describe Scrapper do
   let(:scraper) { Scrapper.new('https://weworkremotely.com/remote-programming-jobs') }
@@ -8,7 +7,6 @@ describe Scrapper do
       allow(scraper).to receive(:scraper).and_return(true)
       expect(scraper.scraper).to eql(true)
     end
-
     it 'calls the start method in Scraper class with a false value' do
       allow(scraper).to receive(:scraper).and_return(true)
       expect(scraper.scraper).not_to eql(false)
