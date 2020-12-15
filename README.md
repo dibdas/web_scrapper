@@ -32,33 +32,32 @@ In this project, I created a scraper which extracts free coursera courses from t
  # Getting Started
 
 To get started, you should first get this file in your local machine by downloading this project or typing.
-`
+
 git 
-`
+
 ## Prerequisites
 
-    Ruby installed on local machine
-    Text editor (preferably: VSCode, Atom)
-    Git
+   Ruby installed on local machine
+   Text editor (preferably: VSCode, Atom)
+   Git
 
 ## Setup
 
-   If you have installed `Ruby` on your machine:
+   If you have installed Ruby on your machine:
 
-   1. Clone the project into your local machine using `git clone` command or download the zip file.
-   2. Go into the project directory using `cd directory name` command.
-   3. Install required gems by using `bundle install`
-   4. From the root directory type `ruby bin/main.rb` command.
+   1. Clone the project into your local machine using git clone command or download the zip file.
+   2. Go into the project directory using cd directory name command.
+   3. Install required gems by using bundle install
+   4. From the root directory type ruby bin/main.rb command.
+   
 ## Running the scraper
-
-    When you run the project it will show you the jobs in the terminal available on the selected page ui..
-    In the specified jobs available you desire you can see the name of the company, role and the remote location.
+When you run the project it will show you the jobs in the terminal available on the selected page ui..
+In the specified jobs available you desire you can see the name of the company, role and the remote location.
 
 # Contributing
 
 :handshake: Contributions, issues and feature requests are welcome!
 Start by:
-
     1. Forking the project
     2. Cloning the project to your local machine
     3. cd into the project directory
