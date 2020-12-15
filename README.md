@@ -35,7 +35,6 @@ To get started, you should first get this file in your local machine by download
 `
 git 
 `
-
 ## Prerequisites
 
     Ruby installed on local machine
@@ -52,8 +51,8 @@ git
    4. From the root directory type `ruby bin/main.rb` command.
 ## Running the scraper
 
-    When you run the project it will show you free courses available on the selected page through your browser, then prompts the user to see more or stop. If you want to see more results you can press the 'y' button or 'Enter/Return' key. If you want to stop or found a job that matches you, then press the 'n' or 'q' button. The scraping process will be stopped.
-    In the free courses available you can be able to see Partner, Course, Level, Enrollment to the course.
+    When you run the project it will show you the jobs in the terminal available on the selected page ui..
+    In the specified jobs available you desire you can see the name of the company, role and the remote location.
 
 # Contributing
 
@@ -70,7 +69,7 @@ Start by:
 
 Please feel free to contribute to any of these!
 
-Feel free to check the [issues page](https://github.com/IjayAbby/Web-Scraper-Ruby-Capstone-Project/issues).
+Feel free to check the [issues page](https://github.com/dibdas/web_scrapper/issues).
 
 ## Author
 
