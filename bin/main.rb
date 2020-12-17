@@ -1,7 +1,6 @@
 require_relative '../lib/scrapper'
 require 'colorize'
 
-
 def jobs_choice
   puts 'enter the job you to search for ?'
   puts "type '1' for remote-business-management-and-finance-jobs "
