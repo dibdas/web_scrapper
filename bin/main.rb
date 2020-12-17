@@ -1,5 +1,6 @@
 require_relative '../lib/scrapper'
 require 'colorize'
+require 'watir'
 
 def jobs_choice
   puts 'enter the job you to search for ?'
@@ -51,15 +52,19 @@ puts "input_category: #{input_category} "
 def results(input_category)
   scrapper = Scrapper.new("https://weworkremotely.com/categories/#{input_category}")
   job_list = scrapper.scraper
+  
   job_list.each do |job|
     jobs = {
       name: job.css('span.company').text,
-      title: job.css('span.title').text
+      title: job.css('span.title').text,
+      link: job.css('@href')[1]
     }
     puts "company: #{jobs[:name]}".red.bold
     puts "role: #{jobs[:title]}".yellow.bold
+    puts "https://weworkremotely.com/#{jobs[:link]}".green.bold
     puts ' '
   end
+ 
 end
 
 results(input_category)
