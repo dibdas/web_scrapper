@@ -60,7 +60,7 @@ def results(input_category)
     }
     puts "company: #{jobs[:name]}".red.bold
     puts "role: #{jobs[:title]}".yellow.bold
-    puts "https://weworkremotely.com/#{jobs[:link]}".green.bold
+    puts "link: https://weworkremotely.com/#{jobs[:link]}".green.bold
     puts ' '
   end
 end
